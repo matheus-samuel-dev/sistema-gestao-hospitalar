@@ -6,6 +6,14 @@ O projeto contempla autenticação, dashboard analítico, agenda médica, prontu
 
 ---
 
+## 🌐 Deploy em produção
+
+A aplicação está publicada com AWS EC2, Docker, Nginx, HTTPS e GitHub Actions.
+
+🔗 **Acesse:** https://gestaohospitalar.duckdns.org
+
+---
+
 ## 🚀 Tecnologias
 
 ### Front-end
