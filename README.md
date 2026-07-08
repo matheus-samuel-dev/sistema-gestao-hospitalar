@@ -36,6 +36,55 @@ O projeto contempla autenticação, dashboard analítico, agenda médica, prontu
 
 ---
 
+## ☁️ Infraestrutura
+
+A aplicação está hospedada em uma infraestrutura própria na AWS, com deploy automatizado e proxy reverso para ambiente de produção.
+
+| Componente | Tecnologia |
+|------------|------------|
+| Servidor | AWS EC2 (Ubuntu) |
+| Containers | Docker + Docker Compose |
+| Proxy Reverso | Nginx |
+| SSL | Let's Encrypt |
+| Domínio | DuckDNS |
+| CI/CD | GitHub Actions |
+| Deploy | SSH Automatizado |
+
+---
+
+## 🔄 Arquitetura
+
+```text
+GitHub
+   │
+   ▼
+GitHub Actions
+   │
+   ▼
+AWS EC2 (Ubuntu)
+   │
+   ▼
+Docker Compose
+   │
+ ┌─┴──────────┐
+ │            │
+ ▼            ▼
+React     Spring Boot
+             │
+             ▼
+        PostgreSQL
+
+             │
+             ▼
+           Nginx
+             │
+             ▼
+     HTTPS (Let's Encrypt)
+             │
+             ▼
+     gestaohospitalar.duckdns.org
+```
+
 ## ✨ Funcionalidades
 
 - ✅ Autenticação com JWT
